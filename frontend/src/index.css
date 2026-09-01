@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@400;700&display=swap');
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-gradient-to-br from-gray-950 via-gray-900 to-gray-950 min-h-screen font-sans;
+    font-family: 'Exo', 'Montserrat', 'Poppins', 'Segoe UI', Arial, sans-serif;
+    color: #f9fafb;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    position: relative;
+  }
+}
+
+/* Remove Ford Mustang SVG background from body::before */
+
+@layer components {
+  .btn-primary {
+    @apply bg-gray-900 border-2 border-blue-700 text-blue-200 font-bold py-2 px-6 rounded-full shadow-lg hover:bg-blue-950 hover:text-blue-300 hover:border-blue-400 transition-all duration-200 flex items-center justify-center;
+  }
+  
+  .btn-secondary {
+    @apply bg-gray-800 border-2 border-blue-900 text-blue-200 font-semibold py-2 px-6 rounded-full shadow hover:bg-blue-950 hover:text-blue-300 hover:border-blue-400 transition-all duration-200 flex items-center justify-center;
+  }
+  
+  .card {
+    @apply bg-gray-900 rounded-2xl shadow-xl border border-gray-800 p-6 mb-6;
+    color: #f9fafb;
+  }
+  
+  .input-field {
+    @apply bg-gray-800 border border-gray-700 rounded-lg px-4 py-2 text-gray-100 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-700 w-full;
+  }
+  
+  .checkbox-custom {
+    @apply w-5 h-5 text-primary-600 bg-gray-100 border-gray-300 rounded focus:ring-primary-500 focus:ring-2;
+  }
+}
+
+label {
+  color: #f3f4f6 !important;
+}
+
+.card label, .card p, .card h2, .card h3, .card h4, .card h5, .card h6, .card span, .card div, .card input, .card select, .card textarea {
+  color: #f9fafb !important;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  background: #181a1b;
+}
+::-webkit-scrollbar-thumb {
+  background: #393e46;
+  border-radius: 8px;
+} 
